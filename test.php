@@ -10,7 +10,9 @@ $slack_client = new SlackApi(SLACK_API_KEY);
 
 echo '<pre>';
 
-$result = $slack_client->getAllUsers();
+// $result = $slack_client->getAllUsers();
+
+$result = $slack_client->getUserById('U04MHA1TE');
 
 if(isset($result)){
 	var_dump($result);

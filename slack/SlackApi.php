@@ -18,8 +18,9 @@ class SlackApi {
 	
 	private function GET($endpoint, $args = array()){		
 		try  {
-			$endpoint .= '?token='.$this->api_token;
-			$response = $this->client->get($endpoint, ['body' => json_encode($args)]);
+			$args['token'] = $this->api_token;
+			//$endpoint .= '?token='.$this->api_token;
+			$response = $this->client->get($endpoint, ['query' => $args]);
 			return $this->checkResponse($response);
 		} catch (ClientException $e) {
 			echo $e->getMessage();
@@ -30,7 +31,7 @@ class SlackApi {
 	private function POST($endpoint, $args = array()){		
 		try {
 			$args['token'] = $this->api_token;
-			$response = $this->client->post($endpoint, ['body' => json_encode($args)]);
+			$response = $this->client->post($endpoint, ['body' => ($args)]);
 			return $this->checkResponse($response);
 		} catch (ClientException $e) {
 			echo $e->getMessage();
@@ -41,7 +42,7 @@ class SlackApi {
 	private function PUT($endpoint, $args = array()){		
 		try {
 			$args['token'] = $this->api_token;
-			$response = $this->client->put($endpoint, ['body' => json_encode($args)]);
+			$response = $this->client->put($endpoint, ['body' => ($args)]);
 			return $this->checkResponse($response);
 		} catch (ClientException $e) {
 			echo $e->getMessage();
@@ -52,7 +53,7 @@ class SlackApi {
 	private function DELETE($endpoint, $args = array()){		
 		try {
 			$args['token'] = $this->api_token;
-			$response = $this->client->delete($endpoint, ['body' => json_encode($args)]);
+			$response = $this->client->delete($endpoint, ['body' => ($args)]);
 			return $this->checkResponse($response);
 		} catch (ClientException $e) {
 			echo $e->getMessage();
@@ -73,6 +74,10 @@ class SlackApi {
 	
 	public function getAllUsers(){
 		return $this->GET('users.list');
+	}
+	
+	public function getUserById($userId){
+		return $this->GET('users.info', array('user' => $userId));
 	}
 	
 }
