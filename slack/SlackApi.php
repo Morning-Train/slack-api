@@ -164,6 +164,31 @@ class SlackApi {
 		return $this->GET('channels.unarchive', array('channel' => $channel));
 	}
 	
+	//untested
+	public function inviteUserToChannel($channel, $user){
+		return $this->GET('channels.invite', ['channel' => $channel, 'user' => $user]);
+	}
+	
+	//untested
+	public function joinChannel($channel, $name){
+		return $this->GET('channels.join', ['name' => $name]);
+	}
+	
+	//untested
+	public function kickUserFromChannel($channel, $user){
+		return $this->GET('channels.kick', ['channel' => $channel, 'user' => $user]);
+	}
+	
+	//untested
+	public function leaveChannel($channel, $user){
+		return $this->GET('channels.leave', ['channel' => $channel]);
+	}
+	
+	//untested
+	public function markChannel($channel){
+		return $this->GET('channels.mark', ['channel' => $channel, 'ts' => time()]);
+	}
+	
 }
 
 ?>
