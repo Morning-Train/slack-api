@@ -80,6 +80,21 @@ class SlackApi {
 		return $this->GET('users.info', array('user' => $userId));
 	}
 	
+	public function getUserPresenceById($userId){
+		return $this->GET('users.getPresence', array('user' => $userId));
+	}
+	
+	public function setUserPresence($presence = 'auto'){
+		if($presence != 'away'){
+			$presence = 'auto';
+		}
+		return $this->GET('users.setPresence', array('presence' => $presence));
+	}
+	
+	public function setCurrentUserAsActive(){
+		return $this->GET('users.setActive');
+	}
+	
 }
 
 ?>
