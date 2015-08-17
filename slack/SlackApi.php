@@ -127,6 +127,23 @@ class SlackApi {
 		return $this->GET('channels.info', array('channel' => $channelId));
 	}
 	
+	public function getChannelHistoryById($channelId, $latest = 'now', $oldest = 0, $inclusive = 1, $count = 100){
+		if($latest == 'now'){
+			$latest = time();
+		}
+		return $this->GET('channels.history', [
+			'channel' => $channelId,
+			'latest' => $latest,
+			'oldest' => $oldest,
+			'inclusive' => $inclusive,
+			'count' => $count
+		]);
+	}
+	
+	public function createChannel($channelName){
+		return $this->GET('channels.create', array('name' => $channelName));
+	}
+	
 }
 
 ?>

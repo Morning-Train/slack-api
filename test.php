@@ -28,7 +28,11 @@ echo '<pre>';
 
 // $result = $slack_client->getAllChannels();
 
-$result = $slack_client->getChannelById('C06MQBSJF');
+// $result = $slack_client->createChannel('test channel');
+
+// $result = $slack_client->getChannelById('C096PG6CE');
+
+$result = $slack_client->getChannelHistoryById('C096PG6CE');
 
 if(isset($result)){
 	var_dump($result);
