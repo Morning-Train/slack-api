@@ -195,6 +195,24 @@ class SlackApi {
 		return $this->get('emoji.list');
 	}
 	
+	/* GROUPS */
+	
+	public function getAllGroups(){
+		return $this->GET('groups.list');
+	}
+	
+	public function getGroupById($channel){
+		return $this->GET('groups.info', ['channel' => $channel]);
+	}
+	
+	public function setGroupPurpose($channel, $purpose){
+		return $this->GET('groups.setPurpose', array('channel' => $channel, 'purpose' => $purpose));
+	}
+	
+	public function setGroupTopic($channel, $topic){
+		return $this->GET('groups.setTopic', array('channel' => $channel, 'topic' => $topic));
+	}
+	
 }
 
 ?>

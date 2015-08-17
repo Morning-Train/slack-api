@@ -46,6 +46,10 @@ echo '<pre>';
 
 // $result = $slack_client->getAllEmoji();
 
+// $result = $slack_client->getAllGroups();
+
+$result = $slack_client->getGroupById('G04N8M7QR');
+
 if(isset($result)){
 	var_dump($result);
 }
