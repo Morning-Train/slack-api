@@ -32,8 +32,24 @@ echo '<pre>';
 
 // $result = $slack_client->getChannelById('C096PG6CE');
 
-$result = $slack_client->getChannelHistoryById('C096PG6CE');
+// $result = $slack_client->getChannelHistoryById('C096PG6CE');
 
+// $result = $slack_client->renameChannel('C096PG6CE', 'test channel 2');
+
+// $result = $slack_client->setChannelPurpose('C096PG6CE', 'et formål');
+
+// $result = $slack_client->setChannelTopic('C096PG6CE', 'et emne');
+
+// $result = $slack_client->archiveChannel('C096PG6CE');
+
+// $result = $slack_client->unarchiveChannel('C096PG6CE');
+
+if(isset($result)){
+	var_dump($result);
+}
+
+
+$result = $slack_client->getChannelById('C096PG6CE');
 if(isset($result)){
 	var_dump($result);
 }

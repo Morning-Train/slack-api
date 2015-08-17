@@ -144,6 +144,26 @@ class SlackApi {
 		return $this->GET('channels.create', array('name' => $channelName));
 	}
 	
+	public function renameChannel($channel, $channelName){
+		return $this->GET('channels.rename', array('channel' => $channel, 'name' => $channelName));
+	}
+	
+	public function setChannelPurpose($channel, $purpose){
+		return $this->GET('channels.setPurpose', array('channel' => $channel, 'purpose' => $purpose));
+	}
+	
+	public function setChannelTopic($channel, $topic){
+		return $this->GET('channels.setTopic', array('channel' => $channel, 'topic' => $topic));
+	}
+	
+	public function archiveChannel($channel){
+		return $this->GET('channels.archive', array('channel' => $channel));
+	}
+	
+	public function unarchiveChannel($channel){
+		return $this->GET('channels.unarchive', array('channel' => $channel));
+	}
+	
 }
 
 ?>
