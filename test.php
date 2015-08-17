@@ -26,7 +26,9 @@ echo '<pre>';
 
 // $result = $slack_client->getStarsForUser(10, 1, 'U04MHA1TE');
 
-$result = $slack_client->getAllChannels();
+// $result = $slack_client->getAllChannels();
+
+$result = $slack_client->getChannelById('C06MQBSJF');
 
 if(isset($result)){
 	var_dump($result);

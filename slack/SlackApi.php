@@ -123,6 +123,10 @@ class SlackApi {
 		return $this->GET('channels.list');
 	}
 	
+	public function getChannelById($channelId){
+		return $this->GET('channels.info', array('channel' => $channelId));
+	}
+	
 }
 
 ?>
