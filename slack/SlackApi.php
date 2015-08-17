@@ -72,6 +72,8 @@ class SlackApi {
 		return false;
 	}
 	
+	/* USERS */
+	
 	public function getAllUsers(){
 		return $this->GET('users.list');
 	}
@@ -93,6 +95,16 @@ class SlackApi {
 	
 	public function setCurrentUserAsActive(){
 		return $this->GET('users.setActive');
+	}
+	
+	/* TEAM */
+	
+	public function getTeam(){
+		return $this->GET('team.info');
+	}
+	
+	public function getTeamAccessLogs($count, $page){
+		return $this->GET('team.accessLogs', ['count' => $count, 'page' => $page]);
 	}
 	
 }

@@ -20,11 +20,9 @@ echo '<pre>';
 
 // $result = $slack_client->setCurrentUserAsActive();
 
-if(isset($result)){
-	var_dump($result);
-}
+// $result = $slack_client->getTeam();
 
-$result = $slack_client->getUserPresenceById('U04MHA1TE');
+// $result = $slack_client->getTeamAccessLogs(10, 2); //Requires admin scope to test
 
 if(isset($result)){
 	var_dump($result);
