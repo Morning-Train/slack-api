@@ -117,6 +117,12 @@ class SlackApi {
 		return $this->GET('stars.list', $args);
 	}
 	
+	/* CHANNELS */
+	
+	public function getAllChannels(){
+		return $this->GET('channels.list');
+	}
+	
 }
 
 ?>
