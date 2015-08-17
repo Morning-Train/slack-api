@@ -24,6 +24,8 @@ echo '<pre>';
 
 // $result = $slack_client->getTeamAccessLogs(10, 2); //Requires admin scope to test
 
+// $result = $slack_client->getStarsForUser(10, 1, 'U04MHA1TE');
+
 if(isset($result)){
 	var_dump($result);
 }

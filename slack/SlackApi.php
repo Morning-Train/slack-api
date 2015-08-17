@@ -107,6 +107,16 @@ class SlackApi {
 		return $this->GET('team.accessLogs', ['count' => $count, 'page' => $page]);
 	}
 	
+	/* STARS */
+	
+	public function getStarsForUser($count, $page, $userId = null){
+		$args = ['count' => $count, 'page' => $page];
+		if($userId != null){
+			$args['user'] = $userId;
+		}
+		return $this->GET('stars.list', $args);
+	}
+	
 }
 
 ?>
