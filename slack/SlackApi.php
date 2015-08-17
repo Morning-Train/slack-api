@@ -189,6 +189,12 @@ class SlackApi {
 		return $this->GET('channels.mark', ['channel' => $channel, 'ts' => time()]);
 	}
 	
+	/* EMOJI */
+	
+	public function getAllEmoji(){
+		return $this->get('emoji.list');
+	}
+	
 }
 
 ?>

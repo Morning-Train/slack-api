@@ -44,6 +44,8 @@ echo '<pre>';
 
 // $result = $slack_client->unarchiveChannel('C096PG6CE');
 
+// $result = $slack_client->getAllEmoji();
+
 if(isset($result)){
 	var_dump($result);
 }
