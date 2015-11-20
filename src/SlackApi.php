@@ -1,5 +1,7 @@
 <?php
 
+namespace MorningTrain\SlackApi;
+
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 
