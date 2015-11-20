@@ -214,6 +214,10 @@ class SlackApi {
 	public function setGroupTopic($channel, $topic){
 		return $this->GET('groups.setTopic', array('channel' => $channel, 'topic' => $topic));
 	}
+
+	public function postMessage($channel, $text, $user){
+		return $this->GET('chat.postMessage', array('channel' => $channel, 'text' => $text, 'as_user' => $user));
+	}
 	
 }
 

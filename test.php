@@ -4,7 +4,7 @@ require 'vendor/autoload.php';
 
 use MorningTrain\SlackApi\SlackApi;
 
-define('SLACK_API_KEY', 'YOUR-SLACK-API-KEY');
+define('SLACK_API_KEY', 'xoxb-14996255168-9sgRGBanmPIh5M0v9USh5W5Z');
 
 $slack_client = new SlackApi(SLACK_API_KEY);
 
@@ -48,14 +48,12 @@ echo '<pre>';
 
 // $result = $slack_client->getAllGroups();
 
-$result = $slack_client->getGroupById('');
+// $result = $slack_client->getGroupById('');
 
-if(isset($result)){
-	var_dump($result);
-}
+// $result = $slack_client->getChannelById('C0EV91NNA');
 
+// $result = $slack_client->postMessage('C0EV91NNA', 'This message was sent by the command', 'U0EVA7H4Y');
 
-$result = $slack_client->getChannelById('');
 if(isset($result)){
 	var_dump($result);
 }
