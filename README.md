@@ -6,6 +6,8 @@
 
 A complete native php wrapper for the [Slack API](https://api.slack.com/)
 
+
+
 ## Install
 
 Via Composer
@@ -33,7 +35,7 @@ If you discover any security related issues, please email mail@morningtrain.dk i
 
 ## Credits
 
-- [morningtrain.dk](http://morningtrain.dk/)
+This was coded on an early [morningtrain.dk](http://morningtrain.dk/)
 
 ## License
 
